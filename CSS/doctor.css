@@ -1,0 +1,264 @@
+:root {
+  --bg: #eef6ff;
+  --card: #ffffff;
+  --primary: #4da3ff;
+  --text: #1f2937;
+  --border: #e5e7eb;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Segoe UI, sans-serif;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+}
+
+/* Layout */
+.app {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 240px;
+  background: var(--card);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+nav a {
+  display: block;
+  padding: 12px;
+  margin: 6px 0;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  background: #e0f2fe;
+}
+
+nav a.active {
+  background: var(--primary);
+  color: white;
+}
+
+.logout {
+  padding: 12px;
+  border-radius: 12px;
+  border: none;
+  background: #fee2e2;
+  color: red;
+  cursor: pointer;
+}
+
+.logout:hover {
+  background: red;
+  color: white;
+}
+
+/* Main */
+.main {
+  flex: 1;
+  padding: 24px;
+}
+
+/* Topbar */
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
+}
+
+.icon-btn {
+  border: none;
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  background: var(--card);
+  transition: 0.3s;
+}
+
+.icon-btn:hover {
+  transform: scale(1.1);
+}
+
+/* Stats */
+.stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 16px;
+  margin: 20px 0;
+}
+
+.stat {
+  background: var(--card);
+  padding: 20px;
+  border-radius: 18px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.stat:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.1);
+}
+
+.active-box {
+  background: linear-gradient(135deg, #4da3ff, #38bdf8);
+  color: white;
+}
+
+/* Queue */
+.queue {
+  background: var(--card);
+  border-radius: 20px;
+  padding: 20px;
+}
+
+.queue-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.queue-header input {
+  padding: 10px 14px;
+  border-radius: 20px;
+  border: 1px solid var(--border);
+}
+
+/* Patient Card */
+.patient-card {
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  margin-top: 16px;
+  overflow: hidden;
+  transition: 0.3s;
+}
+
+.patient-card:hover {
+  transform: scale(1.01);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+}
+
+.patient-summary {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px;
+  cursor: pointer;
+}
+
+.num {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #e0f2fe;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.arrow {
+  margin-left: auto;
+  transition: 0.3s;
+}
+
+.rotate {
+  transform: rotate(180deg);
+}
+
+/* Badges */
+.badge {
+  font-size: 12px;
+  padding: 4px 10px;
+  border-radius: 20px;
+  margin-left: 8px;
+}
+
+.done { background: #dcfce7; color: green; }
+.active { background: #dbeafe; color: #2563eb; }
+.waiting { background: #fef3c7; color: #92400e; }
+
+/* Expanded */
+.patient-details {
+  padding: 16px;
+  border-top: 1px solid var(--border);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.detail {
+  background: #f8fafc;
+  padding: 12px;
+  border-radius: 12px;
+}
+
+.notes {
+  grid-column: span 2;
+}
+
+textarea {
+  width: 100%;
+  border-radius: 12px;
+  padding: 12px;
+  border: 1px solid var(--border);
+}
+/* Dark mode fixes */
+body.dark nav a:hover {
+  background: #334155;
+}
+
+body.dark .stat:hover,
+body.dark .patient-card:hover {
+  box-shadow: 0 10px 25px rgba(0,0,0,0.6);
+}
+
+body.dark .num {
+  background: #1e3a8a;
+  color: white;
+}
+
+body.dark .detail {
+  background: #0f172a;
+}
+
+body.dark textarea {
+  background: #020617;
+  color: white;
+  border: 1px solid #334155;
+}
+
+body.dark input {
+  background: #020617;
+  color: white;
+  border: 1px solid #334155;
+}
+
+body.dark .icon-btn {
+  background: #1e293b;
+  color: white;
+}

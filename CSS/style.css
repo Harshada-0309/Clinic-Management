@@ -48,6 +48,10 @@ nav div button {
   border-radius: 25px;
   border: none;
   cursor: pointer;
+  
+}
+nav div button a {
+  text-decoration: none;
 }
 
 nav div button:nth-child(1) {

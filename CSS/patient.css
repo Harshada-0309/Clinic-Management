@@ -1,0 +1,172 @@
+:root {
+  --bg: #eef6ff;
+  --card: #ffffff;
+  --text: #1f2937;
+  --primary: #4da3ff;
+  --border: #e5e7eb;
+}
+
+body.dark {
+  --bg: #0f172a;
+  --card: #1e293b;
+  --text: #f8fafc;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Segoe UI, sans-serif;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+}
+
+/* Layout */
+.app {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 240px;
+  background: var(--card);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-right: 1px solid var(--border);
+}
+
+.logo {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.profile {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.avatar {
+  font-size: 36px;
+}
+
+nav a {
+  display: block;
+  padding: 12px;
+  margin: 6px 0;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+nav a.active {
+  background: var(--primary);
+  color: white;
+}
+
+.logout {
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  background: #fee2e2;
+  color: red;
+  cursor: pointer;
+}
+
+.logout:hover {
+  background: red;
+  color: white;
+}
+
+/* Main */
+.main {
+  flex: 1;
+  padding: 20px;
+}
+
+/* Topbar */
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#themeToggle {
+  padding: 8px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+}
+
+/* Stats */
+.stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 16px;
+  margin: 20px 0;
+}
+
+.card {
+  background: var(--card);
+  padding: 20px;
+  border-radius: 16px;
+  transition: all 0.3s ease;
+}
+
+/* Grid */
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.box {
+  background: var(--card);
+  padding: 20px;
+  border-radius: 16px;
+  transition: all 0.3s ease;
+}
+
+ul li {
+  background: var(--bg);
+  padding: 10px;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+
+.done {
+  color: green;
+  text-decoration: line-through;
+}
+
+.overdue {
+  border: 2px solid red;
+}
+
+/* Progress bar */
+.progress {
+  height: 6px;
+  background: #22c55e;
+  margin-top: 10px;
+  border-radius: 6px;
+}
+
+/* Hover + Click animation */
+.clickable {
+  cursor: pointer;
+}
+
+.clickable:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+/* ACTIVE STATE (THIS WAS MISSING EARLIER) */
+.active-box {
+  background: linear-gradient(135deg, #4da3ff, #60a5fa) !important;
+  color: white;
+}

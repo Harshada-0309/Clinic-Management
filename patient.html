@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>HealthCare+ Dashboard</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="CSS\patient.css" />
+</head>
+<body>
+
+<div class="app">
+
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <div class="top">
+      <h2 class="logo">❤️ HealthCare+</h2>
+
+      <div class="profile">
+        <div class="avatar">👤</div>
+        <h4>Harshadashinde3333</h4>
+        <p>Patient</p>
+      </div>
+
+      <nav>
+        <a class="active">🏠 Dashboard</a>
+        <a>📅 Appointments</a>
+        <a>📄 Medical Records</a>
+        <a>🕒 History</a>
+        <a>⚙️ Settings</a>
+      </nav>
+    </div>
+
+    <button class="logout">🚪 Logout</button>
+  </aside>
+
+  <!-- Main Content -->
+  <main class="main">
+
+    <header class="topbar">
+      <div>
+        <h2>Welcome, Harshadashinde3333!</h2>
+        <p>Here's your health overview</p>
+      </div>
+
+      <button id="themeToggle">🌙</button>
+    </header>
+
+    <!-- Stats Cards -->
+    <section class="stats">
+      <div class="card clickable active-box">
+        <h3>33%</h3>
+        <p>Daily Progress</p>
+      </div>
+
+      <div class="card clickable">
+        <h3>#3</h3>
+        <p>Queue Position</p>
+      </div>
+
+      <div class="card clickable">
+        <h3>25m</h3>
+        <p>Estimated Wait</p>
+        <div class="progress"></div>
+      </div>
+
+      <div class="card clickable">
+        <h3>3</h3>
+        <p>Pending Meds</p>
+      </div>
+    </section>
+
+    <!-- Boxes -->
+    <section class="grid">
+      <div class="box clickable">
+        <h3>Today's Medicines</h3>
+        <ul>
+          <li>💊 Aspirin 75mg</li>
+          <li class="done">✔ Metformin</li>
+          <li>💊 Vitamin D3</li>
+          <li class="overdue">⚠ BP Med Overdue</li>
+        </ul>
+      </div>
+
+      <div class="box clickable">
+        <h3>Daily Activities</h3>
+        <ul>
+          <li class="done">✔ Morning Walk</li>
+          <li class="done">✔ BP Check</li>
+          <li>💧 Drink Water</li>
+          <li>🧘 Yoga</li>
+        </ul>
+      </div>
+    </section>
+
+  </main>
+</div>
+
+<!-- JS -->
+<script src="JS\patient.js"></script>
+</body>
+</html>

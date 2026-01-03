@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>HealthCare+ Sign Up</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="CSS\login.css" />
+</head>
+<body>
+
+  <div class="container">
+    <div class="header">
+      <div class="logo">❤️</div>
+      <h1>HealthCare+</h1>
+      <h2>Create Account</h2>
+      <p>Sign up to get started</p>
+    </div>
+
+    <div class="card">
+      <p class="label">Register as</p>
+
+      <div class="role-switch">
+        <button class="role-btn active" id="patientBtn">👤 Patient</button>
+        <button class="role-btn" id="doctorBtn">🩺 Doctor</button>
+      </div>
+
+      <div class="input-group">
+        <label>Full Name</label>
+        <input type="text" placeholder="Enter your full name" />
+      </div>
+
+      <div class="input-group">
+        <label>Email or Phone</label>
+        <input type="text" placeholder="Enter your email or phone" />
+      </div>
+
+      <div class="input-group">
+        <label>Password</label>
+        <div class="password-box">
+          <input type="password" id="password" placeholder="Create password" />
+          <span id="togglePassword">👁️</span>
+        </div>
+      </div>
+
+      <div class="input-group">
+        <label>Confirm Password</label>
+        <div class="password-box">
+          <input type="password" id="confirmPassword" placeholder="Confirm password" />
+        </div>
+      </div>
+
+      <button class="login-btn">Sign Up</button>
+
+      <p class="signup">
+        Already have an account? <a href="index.html">Login</a>
+      </p>
+    </div>
+  </div>
+
+  <script src="JS\signup.js"></script>
+</body>
+</html>

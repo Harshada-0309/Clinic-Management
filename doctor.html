@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>HealthCare+ Doctor Dashboard</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="CSS\doctor.css" />
+</head>
+<body>
+
+<div class="app">
+
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <div class="brand">
+      <div class="logo">💙</div>
+      <h2>HealthCare+</h2>
+    </div>
+
+    <nav>
+      <a class="active">🏠 Dashboard</a>
+      <a>📅 Appointments</a>
+      <a>👥 Patients</a>
+      <a>📊 Reports</a>
+      <a>⚙️ Settings</a>
+    </nav>
+
+    <button class="logout">🚪 Logout</button>
+  </aside>
+
+  <!-- Main -->
+  <main class="main">
+
+    <!-- Header -->
+    <header class="topbar">
+      <div>
+        <h1>Welcome, Dr. Harshadashinde2611!</h1>
+        <p>Today's Schedule</p>
+      </div>
+
+      <div class="actions">
+        <button class="icon-btn" id="themeToggle">🌙</button>
+        <button class="icon-btn notif">🔔<span>3</span></button>
+        <button class="icon-btn">👤</button>
+      </div>
+    </header>
+
+    <!-- Stats -->
+    <section class="stats">
+      <div class="stat active-box">
+        <h2>24</h2>
+        <p>Total Patients</p>
+      </div>
+      <div class="stat">
+        <h2>8</h2>
+        <p>Online Consults</p>
+      </div>
+      <div class="stat">
+        <h2>16</h2>
+        <p>In-Person Visits</p>
+      </div>
+      <div class="stat">
+        <h2>15 min</h2>
+        <p>Avg. Time</p>
+      </div>
+      <div class="stat">
+        <h2>3</h2>
+        <p>Current Queue</p>
+      </div>
+    </section>
+
+    <!-- Patient Queue -->
+    <section class="queue">
+      <div class="queue-header">
+        <h2>Patient Queue</h2>
+        <input type="text" placeholder="🔍 Search patients..." />
+      </div>
+
+      <!-- Patient Card -->
+      <div class="patient-card">
+        <div class="patient-summary">
+          <div class="num">#1</div>
+          <div>
+            <h3>John Doe <span class="badge done">Completed</span></h3>
+            <p>45 yrs • Male • 09:00 AM • Offline</p>
+          </div>
+          <span class="arrow">⌄</span>
+        </div>
+      </div>
+
+      <div class="patient-card active">
+        <div class="patient-summary">
+          <div class="num">#2</div>
+          <div>
+            <h3>Sarah Johnson <span class="badge active">In Consultation</span></h3>
+            <p>32 yrs • Female • 09:30 AM • Online</p>
+          </div>
+          <span class="arrow rotate">⌄</span>
+        </div>
+
+        <!-- Expanded -->
+        <div class="patient-details">
+          <div class="detail">
+            <h4>Blood Pressure</h4>
+            <p>110 / 70</p>
+          </div>
+          <div class="detail">
+            <h4>Heart Rate</h4>
+            <p>65 bpm</p>
+          </div>
+
+          <div class="notes">
+            <h4>Health Notes</h4>
+            <textarea placeholder="Add notes..."></textarea>
+          </div>
+        </div>
+      </div>
+
+      <div class="patient-card">
+        <div class="patient-summary">
+          <div class="num">#3</div>
+          <div>
+            <h3>Emily Rodriguez <span class="badge waiting">Waiting</span></h3>
+            <p>28 yrs • Female • 10:30 AM • Online</p>
+          </div>
+          <span class="arrow">⌄</span>
+        </div>
+      </div>
+
+    </section>
+
+  </main>
+</div>
+
+<script src="JS\doctor.js"></script>
+</body>
+</html>
