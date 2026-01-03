@@ -1,0 +1,310 @@
+
+/* ===== Global Styles ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+body {
+  background-color: #f4f9ff;
+  color: #1f2937;
+  line-height: 1.6;
+}
+
+/* ===== Header / Navbar ===== */
+header {
+  background: #ffffff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+  padding: 15px 50px;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav h1 {
+  color: #3b82f6;
+  font-size: 26px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+nav ul li {
+  cursor: pointer;
+  font-weight: 500;
+}
+
+nav div button {
+  margin-left: 10px;
+  padding: 8px 16px;
+  border-radius: 25px;
+  border: none;
+  cursor: pointer;
+}
+
+nav div button:nth-child(1) {
+  background: transparent;
+  color: #3b82f6;
+}
+
+nav div button:nth-child(2) {
+  background: #e0edff;
+  color: #3b82f6;
+}
+
+nav div button:nth-child(3) {
+  background: #3b82f6;
+  color: #ffffff;
+}
+
+/* ===== Hero Section ===== */
+/* ===== Hero Section ===== */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 80px 60px;
+  background: linear-gradient(135deg, #4facfe, #38d4c4);
+  color: white;
+  gap: 40px;
+}
+
+.hero-text {
+  max-width: 50%;
+}
+
+.hero-text h2 {
+  font-size: 48px;
+  margin-bottom: 15px;
+}
+
+.hero-text p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.hero-text ul {
+  list-style: none;
+  margin-bottom: 30px;
+}
+
+.hero-text ul li {
+  margin-bottom: 10px;
+  position: relative;
+  padding-left: 25px;
+}
+
+.hero-text ul li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.hero button {
+  padding: 12px 26px;
+  border-radius: 30px;
+  border: none;
+  font-size: 16px;
+  margin-right: 15px;
+  cursor: pointer;
+}
+
+.hero button:first-of-type {
+  background: white;
+  color: #3b82f6;
+}
+
+.hero button.outline {
+  background: transparent;
+  color: white;
+  border: 2px solid white;
+}
+
+/* ===== Doctor Image ===== */
+.hero-image img {
+  width: 380px;
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 900px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-text {
+    max-width: 100%;
+  }
+
+  .hero-image img {
+    width: 280px;
+  }
+}
+
+/* ===== Features ===== */
+section:nth-of-type(2) {
+  padding: 60px 50px;
+  text-align: center;
+}
+
+section:nth-of-type(2) div {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+  margin-top: 30px;
+}
+
+section:nth-of-type(2) div p {
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  font-weight: 600;
+}
+
+
+
+/* ===== Services ===== */
+section:nth-of-type(3) {
+  padding: 70px 50px;
+  background: #ffffff;
+}
+
+section:nth-of-type(3) h2 {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+section:nth-of-type(3) ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+  list-style: none;
+}
+
+section:nth-of-type(3) ul li {
+  padding: 30px;
+  background: #f8fbff;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+  font-weight: 500;
+}
+
+/* ===== Why Choose Us ===== */
+section:nth-of-type(4) {
+  padding: 70px 50px;
+  background: #eef5ff;
+}
+
+section:nth-of-type(4) ul {
+  list-style: none;
+  max-width: 600px;
+}
+
+section:nth-of-type(4) ul li {
+  margin-bottom: 15px;
+  font-weight: 500;
+}
+
+/* ===== Doctors ===== */
+section:nth-of-type(5) {
+  padding: 70px 50px;
+  background: #ffffff;
+  text-align: center;
+}
+
+section:nth-of-type(5) article {
+  display: inline-block;
+  background: #f9fbff;
+  padding: 30px;
+  margin: 15px;
+  border-radius: 20px;
+  width: 260px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+section:nth-of-type(5) button {
+  margin-top: 15px;
+  padding: 10px 20px;
+  border-radius: 25px;
+  border: none;
+  background: #3b82f6;
+  color: white;
+  cursor: pointer;
+}
+
+/* ===== How It Works ===== */
+section:nth-of-type(6) {
+  padding: 70px 50px;
+  background: #eef5ff;
+  text-align: center;
+}
+
+section:nth-of-type(6) ol {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  list-style: none;
+}
+
+section:nth-of-type(6) ol li {
+  background: white;
+  padding: 30px;
+  border-radius: 20px;
+  width: 200px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  font-weight: 600;
+}
+
+/* ===== Testimonials ===== */
+section:nth-of-type(7) {
+  padding: 70px 50px;
+  text-align: center;
+}
+
+section:nth-of-type(7) blockquote {
+  font-size: 18px;
+  font-style: italic;
+  margin-bottom: 10px;
+}
+
+/* ===== Call To Action ===== */
+section:nth-of-type(8) {
+  background: linear-gradient(135deg, #4facfe, #38d4c4);
+  padding: 70px 50px;
+  text-align: center;
+  color: white;
+}
+
+section:nth-of-type(8) button {
+  margin-top: 20px;
+  padding: 15px 30px;
+  border-radius: 30px;
+  border: none;
+  font-size: 16px;
+  background: white;
+  color: #3b82f6;
+  cursor: pointer;
+}
+
+/* ===== Footer ===== */
+footer {
+  background: #0f172a;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  font-size: 14px;
+}
